@@ -1,0 +1,68 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'monteserrat',Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+header{
+    height: 100px;
+    background-color: #000;
+    color:#fff;
+}
+.header{
+    max-width: 1140px;/*toda pagina vai seguir um parametro desta medida*/
+    height: 100px;
+    display:flex;
+    margin: auto;/*para a div centralizar no meio com o conteudo*/
+    align-items: center;/*centralizando os items no meio*/   
+}
+.logo{
+  width: 100px;
+}
+.logoimg{
+    width:80px;
+    height:80px;
+    background-color: #b28756;
+}
+.menu{
+    flex:1;/* o flex pega todo restante do espaço*/
+   display:flex; /*deixando flexivel para uspo do flexbox*/
+   justify-content: flex-end;
+}
+.menu ul,
+.menu li{
+    list-style: none; /*remove as bolinhas da lista nao ordenada*/
+
+}
+.menu ul{
+    display: flex; /*vai deixar o menu um ao lado do outro*/
+}
+
+.menu li a{
+    color:#fff;
+    text-transform: uppercase;  /*para deixar o conteudo todo em MAIUSCULO*/
+    font-weight:600;  /*fonte*/
+    text-decoration:none; /*retirar o sublinhado*/
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 100px; /*colocando esta altura para o sublinhado ficar bem rente (abaixo)*/
+    display: flex;    /*deixando o meu menu flexivel (BORDAA)*/
+    align-items: center; /*alinhando meu menu no centro mostrando a BORDA*/
+    border-bottom: 5px solid #000; /*utilizando a borda black, para o menu nao mover ao passar o mouse*/
+}
+
+.menu li a:hover,
+.menu .active a{  /*<-este deixa o sublinhado do Home fixado*/
+     border-bottom: 6px solid #b28756; /*borda (sublinhado ao passar o mouse) colorido de todo menu*/
+     color:#ccc;
+}
+
+
+
+
+
+
