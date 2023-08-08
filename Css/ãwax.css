@@ -7,6 +7,7 @@
 body{
     font-family: 'monteserrat',Arial, Helvetica, sans-serif;
     font-size: 13px;
+    overflow-x: hidden;  /*Todo conteúdo que ultrapassar a horizontal será ignorado*/
 }
 header{
     height: 100px;
@@ -121,10 +122,66 @@ header{
 .banner .slide_pointers{
     width:100vw;
     height: 20px;
-    background-color: red;
     position:absolute; /*vai ficar independente da area*/
-    margin-top:-400px;
-
-
+    margin-top:-300px;    /*sube o conteudo para o meio do banner*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.banner .pointer{
+    width: 15px;
+    height: 15px;
+    border:2px solid #b28756;
+    border-radius: 8px;
+    margin-left: 5px;
+    margin-right: 5px;
+    cursor:pointer;  /*Este cursor é para adcionar o efeito de maozinha ao passar o mouse por cima do (pointer)*/
+}
+.banner .pointer.active {
+    background-color:#b28756;    /*preenchendo a primeira bolinha*/
+}
+
+
+.default{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.default .section_title,
+.default .section_desc{
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 600;  /*Negrito*/
+}
+
+.default .section_title{
+    font-size:20px;
+}
+
+.default .section_desc{
+    font-size: 12px;
+    color: #ccc;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.default .section_body{
+    max-width:1140px; /* é a mesma que definimmos no nosso menu Àcima*/
+    margin:auto;   /*Fazer ir pro meio*/
+    min-height:100px;
+    background-color:#ccc;
+}
+
+.default.light{
+    background-color:#f7f7f7;
+}
+.deafult.light .section_title{
+    color:#000;
+}
+
+.default.dark{
+    background-color: #000;
+}
+.default.dark .section_title{
+    color:#fff;
+}
