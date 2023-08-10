@@ -62,6 +62,23 @@ header{
      border-bottom: 6px solid #b28756; /*borda (sublinhado ao passar o mouse) colorido de todo menu*/
      color:#ccc;
 }
+
+
+.button {
+    display: inline-block;   /*o background do botao nao ultrapassa a margem de tamanho do conteudo etc*/
+    background-color: #b28756;
+    color:#fff;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600px; /* itensidade daa fonte seja ela negrito ou peso*/
+   text-decoration: none;
+   padding: 10px 30px;  /*os dois valores significam Padding vertical  e padding horizontal*/
+   margin-top:30px;
+   border-radius: 20px;
+}
+
+
+
 .banner{
     height:calc(100vh - 100px) ; /*100vh pega o tamanho do monitor, porem deixando barra de rolagem, p n acontecer isso podemos usar o calc fzd uma conta diminuindo por 100px do header (descontar os 100px utilizado no header, respeitando o espaço )*/
     background-color: #ccc;
@@ -107,18 +124,6 @@ header{
     margin-top: 20px;
 }
 
-.banner a{
-    display: block;
-    background-color: #b28756;
-    color:#fff;
-    text-transform: uppercase;
-    font-size: 13px;
-    font-weight: 600px; /* itensidade daa fonte seja ela negrito ou peso*/
-   text-decoration: none;
-   padding: 10px 30px;  /*os dois valores significam Padding vertical  e padding horizontal*/
-   margin-top:30px;
-   border-radius: 20px;
-}
 .banner .slide_pointers{
     width:100vw;
     height: 20px;
@@ -168,20 +173,81 @@ header{
 .default .section_body{
     max-width:1140px; /* é a mesma que definimmos no nosso menu Àcima*/
     margin:auto;   /*Fazer ir pro meio*/
-    min-height:100px;
-    background-color:#ccc;
+    
 }
 
 .default.light{
     background-color:#f7f7f7;
 }
-.deafult.light .section_title{
+.deafult.light .section_title,
+.default.light .section_body{
     color:#000;
 }
 
 .default.dark{
     background-color: #000;
 }
-.default.dark .section_title{
+.default.dark .section_title,
+.default.dark .section_body{
     color:#fff;
 }
+
+
+
+
+
+
+
+/* 
+    CSS DE ÁREAS ESPECIFICAS
+*/
+
+ .aboutus{
+  display:flex;
+}
+ .aboutus__left {
+    flex:1;
+}
+
+.aboutus__left p{
+    font-size: 14px;    /*tamanho da fonte*/
+    line-height: 25px; /*Espaço entre as linhas do texto*/
+}
+.aboutus__right {
+    width:520px;
+    text-align: center; /* ajustando a imagem*/
+}
+.aboutus__right img{
+  width:380px;
+  box-shadow: 0px 5px 10px #333;  /*efeito sombra (ou seja, adcionando uma sombra na img)*/
+}
+
+
+.section_services{
+    display:flex;
+    text-align: center;
+}
+
+.section_service{
+    flex:1;
+    border-right: 1px solid #333;
+    padding: 15px;
+}
+
+.section_service:first-child{    /* criado só pra adcionar o efeito de borda left na primeira img de services*/
+    border-left: 1px solid #333;
+
+}
+
+.section_service h4{
+    margin-top: 20px;
+    text-transform: uppercase;  /*MAIUSCULA*/
+    font-size:18px;
+}
+    
+
+.section_service p {
+    margin-top: 10px;
+    font-size: 13px;
+    color:#999;
+ }
